@@ -101,12 +101,12 @@ ATOM MyRegisterClass(HINSTANCE hInstance)
     // LoadCursor returns a cursor that seems to dynamically adjust it's resolution between monitors
     // On a dual monitor setup, moving the mouse between different DPI monitors the cursor maintains
     // it's apparent size.
-    wcex.hCursor = LoadCursor(hInstance, MAKEINTRESOURCE(IDC_COLSIZER));
+    //wcex.hCursor = LoadCursor(hInstance, MAKEINTRESOURCE(IDC_COLSIZER));
 
     // Manually loading the resource doesn't..
     // On a dual monitor setup, the cursor will either appear too small on one monitor or too large
     // on the other.
-    //wcex.hCursor = MyLoadCursor(hInstance, MAKEINTRESOURCE(IDC_COLSIZER));
+    wcex.hCursor = MyLoadCursor(hInstance, MAKEINTRESOURCE(IDC_COLSIZER));
 
 
     return RegisterClassExW(&wcex);
